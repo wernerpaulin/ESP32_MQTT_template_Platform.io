@@ -1,0 +1,17 @@
+Arduino / ESP32 auf NodeMCU via VS Code Programmieren
+
+1. VS Code installieren
+2. Arduino installieren
+3. Platform.io als Extension in VS Code installieren
+
+Achtung: Serieller Treiber für Mac installieren
+https://www.silabs.com/products/development-tools/software/usb-to-uart-bridge-vcp-drivers
+
+Terminal: ls /dev/tty*
+
+Driver sieht dann so vermutlich aus:
+/dev/tty.SLAB_USBtoUART
+
+
+in platformio.ini einfügen:
+upload_port = /dev/tty.SLAB_USBtoUART
